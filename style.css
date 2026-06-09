@@ -1,58 +1,204 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+/* تنسيقات عامة للموقع */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+    background-color: #0b0f19; /* خلفية داكنة فخمة */
+    color: #ffffff;
+}
+
+/* القائمة العلوية */
 header {
-    background-color: #111;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #111726;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 2px solid #28a745;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-#news-container {
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #28a745; /* اللون الأخضر الرياضي */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #28a745;
+}
+
+/* القسم الترحيبي البطل */
+.hero {
+    background: linear-gradient(rgba(11, 15, 25, 0.8), rgba(11, 15, 25, 0.9)), url('https://unsplash.com') no-repeat center/cover;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+/* زر اتفرج المطلب الأساسي */
+.btn-live {
+    display: inline-block;
+    background-color: #ff003c; /* لون أحمر ناري جذاب للضغط */
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.5);
+    transition: 0.3s;
+}
+
+.btn-live:hover {
+    transform: scale(1.05);
+    background-color: #cc0030;
+}
+
+/* المساحات الإعلانية */
+.ad-space {
+    background-color: #161f33;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px dashed #444;
+    color: #888;
+    border-radius: 8px;
+}
+
+/* قسم جدول المباريات */
+.matches-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.matches-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.matches-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+}
+
+.match-card {
+    background-color: #111726;
+    border-radius: 10px;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #1f2942;
+    transition: 0.3s;
 }
-.news-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    overflow: hidden;
+
+.match-card:hover {
+    border-color: #28a745;
+}
+
+.teams {
     display: flex;
-    flex-direction: column;
-    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
 }
-.news-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
+
+.team {
+    font-size: 1.1rem;
+    font-weight: bold;
 }
-.news-card h2 {
-    font-size: 1.2rem;
-    margin: 15px 0 10px 0;
-    color: #333;
+
+.vs {
+    background-color: #28a745;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
-.news-card p {
+
+.match-info {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.btn-watch {
+    display: block;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-watch:hover {
+    background-color: #1e7e34;
+}
+
+/* أقسام إضافية وقانونية */
+.about-section {
+    max-width: 800px;
+    margin: 5px auto 40px auto;
+    background-color: #111726;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.about-section h3 {
+    margin-bottom: 15px;
+    color: #28a745;
+}
+
+.about-section p {
+    color: #b1b9c9;
+    line-height: 1.7;
+}
+
+footer {
+    background-color: #070a10;
+    text-align: center;
+    padding: 20px;
     font-size: 0.9rem;
     color: #666;
-    flex-grow: 1;
+    border-top: 1px solid #111726;
 }
-.news-card a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
+
+.legal-links a {
+    color: #888;
     text-decoration: none;
-    border-radius: 4px;
 }
-.news-card a:hover {
-    background-color: #0056b3;
+
+.legal-links a:hover {
+    color: #28a745;
 }
