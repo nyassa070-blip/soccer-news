@@ -6,14 +6,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* خلفية الموقع بالكامل */
+/* خلفية الموقع بالكامل (تم إضافة صورة الملعب هنا) */
 body {
-    background-color: #0b0f19; /* لون أسود فخم للملاعب */
+    background: linear-gradient(rgba(11, 15, 25, 0.75), rgba(11, 15, 25, 0.85)), 
+                url('https://unsplash.com') no-repeat center center/cover;
     color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* يمنع ظهور أشرطة التمرير الجانبية */
 }
 
 /* تنسيق الهيدر لجعل اسم الموقع في اليمين */
@@ -26,9 +26,10 @@ body {
 
 /* خط اسم الموقع الكبير والمميز */
 .site-title {
-    font-size: 3rem; /* خط كبير جداً وواضح */
+    font-size: 3rem; 
     color: #28a745; /* لون أخضر عشبي رياضي */
     font-weight: 900; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* ظل خفيف ليبرز فوق الصورة */
 }
 
 /* تنسيق الحاوية لتوسيط الزر في نصف الشاشة بالظبط */
@@ -44,30 +45,46 @@ body {
 .btn-watch-rectangle {
     display: block;
     width: 100%;
-    max-width: 500px; /* زيادة عرض المستطيل ليتحمل الخط الضخم */
+    max-width: 500px; 
     background-color: #ff003c; /* لون أحمر ناري قوي */
     color: #ffffff;
     text-decoration: none;
     text-align: center;
-    padding: 28px 0; /* زيادة السماحة الرأسية للمستطيل */
-    font-size: 2.2rem; /* خط ضخم جداً وواضح تماماً */
-    font-weight: 900; /* أقصى درجات عرض الحروف السميكة */
+    padding: 28px 0; 
+    font-size: 2.2rem; 
+    font-weight: 900; 
     border-radius: 8px; 
     box-shadow: 0 6px 20px rgba(255, 0, 60, 0.4);
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة سلسة ومرنة */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
     cursor: pointer;
     user-select: none;
 }
 
-/* التأثير المطور عند تحريك الماوس أو الوقوف فوق الزر */
+/* التأثير عند تحريك الماوس أو الوقوف فوق الزر */
 .btn-watch-rectangle:hover {
     background-color: #ff1a4e;
     box-shadow: 0 8px 30px rgba(255, 0, 60, 0.6);
 }
 
-/* 🌟 التأثير السحري: عند الضغط الفعلي (Click) يبرز الزر ويكبر ويتوهج */
+/* عند الضغط الفعلي (Click) يبرز الزر ويكبر ويتوهج */
 .btn-watch-rectangle:active {
-    transform: scale(1.12); /* يبرز ويكبر للأمام بنسبة ملحوظة */
-    background-color: #ff3362; /* يفتح لونه قليلاً ليعطي إضاءة */
-    box-shadow: 0 0 40px rgba(255, 0, 60, 0.9); /* توهج ضوئي خارق وخلفي */
+    transform: scale(1.12); 
+    background-color: #ff3362; 
+    box-shadow: 0 0 40px rgba(255, 0, 60, 0.9); 
 }
+
+/* تنسيق مساحات الإعلانات المجهزة عشان تحافظ على مظهر الموقع */
+.ad-container-top {
+    width: 100%;
+    max-width: 728px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.ad-container-bottom {
+    width: 100%;
+    max-width: 728px;
+    margin: 20px auto 40px auto;
+    text-align: center;
+}
+
