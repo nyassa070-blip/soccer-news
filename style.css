@@ -1,34 +1,64 @@
+/* تصغير وتصفير المسافات */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* خلفية الموقع بالكامل */
 body {
-    background-color: #0b0f19;
+    background-color: #0b0f19; /* لون أسود فخم للملاعب */
     color: #ffffff;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* تنسيق الهيدر لجعل اسم الموقع في اليمين */
+.site-header {
+    width: 100%;
+    padding: 25px 4% 10px 4%; /* مسافة من الأعلى واليمين */
+    display: flex;
+    justify-content: flex-start; /* توجيه النص لليمين تماماً */
+}
+
+/* خط اسم الموقع الكبير والمميز */
+.site-title {
+    font-size: 2.8rem; /* خط كبير جداً وواضح */
+    color: #28a745; /* لون أخضر عشبي رياضي */
+    font-weight: 900;
+}
+
+/* تنسيق الحاوية لتوسيط الزر في نصف الشاشة بالظبط */
+.main-content {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 20px;
 }
 
-h1 {
-    font-size: 3rem;
-    color: #28a745;
-    margin-bottom: 30px;
-}
-
-.btn-watch {
-    display: inline-block;
-    background-color: #ff003c;
+/* تنسيق الزر على شكل مستطيل منسق في المنتصف */
+.btn-watch-rectangle {
+    display: block;
+    width: 100%;
+    max-width: 450px; /* تحديد عرض المستطيل ليظهر متناسقاً */
+    background-color: #ff003c; /* لون أحمر ناري قوي */
     color: #ffffff;
     text-decoration: none;
-    padding: 20px 40px;
-    font-size: 1.5rem;
+    text-align: center;
+    padding: 22px 0; /* مسافة داخلية ليعطي شكل مستطيل عريض */
+    font-size: 1.6rem;
     font-weight: bold;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(255, 0, 60, 0.4);
+    border-radius: 6px; /* انحناء بسيط جداً للأطراف ليحافظ على شكل المستطيل الحاد */
+    box-shadow: 0 5px 20px rgba(255, 0, 60, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* تأثير خفيف عند تمرير الماوس */
+.btn-watch-rectangle:hover {
+    transform: scale(1.03);
+    background-color: #cc0030;
+    box-shadow: 0 8px 25px rgba(255, 0, 60, 0.6);
 }
