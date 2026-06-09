@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_API_KEY_HERE'; 
+const apiKey = '6db88b95232b5e7933c3e8d75186ca24'; 
 const url = `https://gnews.io{apiKey}`;
 
 const newsContainer = document.getElementById('news-container');
