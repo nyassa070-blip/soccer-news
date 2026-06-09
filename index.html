@@ -1,19 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USA Soccer News</title>
+    <title>Kora Hub | كورة هاب - بث مباشر للمباريات</title>
     <link rel="stylesheet" href="style.css">
+    <!-- هنا يمكنك وضع كود تتبع جوجل أدسينس مستقبلاً داخل الـ head -->
 </head>
 <body>
+
+    <!-- القائمة العلوية -->
     <header>
-        <h1>USA Soccer News</h1>
+        <div class="logo">⚽ Kora Hub</div>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#matches">مباريات اليوم</a>
+            <a href="#about">من نحن</a>
+        </nav>
     </header>
-    <main>
-        <!-- هنا سيتم عرض الأخبار تلقائياً -->
-        <div id="news-container"></div>
-    </main>
-    <script src="script.js"></script>
+
+    <!-- القسم الرئيسي الترحيبي -->
+    <section class="hero" id="home">
+        <h1>مرحباً بك في كورة هاب</h1>
+        <p>تابع أهم مباريات اليوم بث مباشر لايف بجودة عالية وبدون تقطيع</p>
+        <a href="https://www.yalla-shoot-neow.live/" target="_blank" class="btn-live">🔴 اتفرج على المباريات الآن</a>
+    </section>
+
+    <!-- مساحة إعلانية علوية (مهمة لأدسينس) -->
+    <div class="ad-space">
+        <p>مساحة إعلانية مجهزة</p>
+    </div>
+
+    <!-- قسم المباريات المجهز -->
+    <section class="matches-section" id="matches">
+        <h2>🔥 أهم مباريات اليوم</h2>
+        <div class="matches-container">
+            
+            <!-- بطاقة مباراة 1 -->
+            <div class="match-card">
+                <div class="teams">
+                    <span class="team">الفريق الأول</span>
+                    <span class="vs">VS</span>
+                    <span class="team">الفريق الثاني</span>
+                </div>
+                <div class="match-info">المناسبة: مباراة ودية دولية</div>
+                <a href="https://www.yalla-shoot-neow.live/" target="_blank" class="btn-watch">شاهد البث المباشر</a>
+            </div>
+
+            <!-- بطاقة مباراة 2 -->
+            <div class="match-card">
+                <div class="teams">
+                    <span class="team">ريال مدريد</span>
+                    <span class="vs">VS</span>
+                    <span class="team">برشلونة</span>
+                </div>
+                <div class="match-info">المناسبة: الدوري الإسباني</div>
+                <a href="https://www.yalla-shoot-neow.live/" target="_blank" class="btn-watch">شاهد البث المباشر</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- مساحة إعلانية سفلية -->
+    <div class="ad-space">
+        <p>مساحة إعلانية مجهزة</p>
+    </div>
+
+    <!-- قسم من نحن لضمان قبول أدسينس -->
+    <section class="about-section" id="about">
+        <h3>عن كورة هاب (About Us)</h3>
+        <p>منصة رياضية متميزة تقدم لعشاق كرة القدم دليلاً شاملاً وجدولاً مفصلاً لأهم مباريات اليوم، مع توفير روابط نقل مباشر سريعة وآمنة بالتعاون مع كبرى شبكات البث الإخباري.</p>
+    </section>
+
+    <!-- أسفل الموقع -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 لـ Kora Hub</p>
+        <div class="legal-links">
+            <a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والأحكام</a>
+        </div>
+    </footer>
+
 </body>
 </html>
