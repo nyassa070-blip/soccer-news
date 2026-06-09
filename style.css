@@ -13,21 +13,22 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* يمنع ظهور أشرطة التمرير الجانبية */
 }
 
 /* تنسيق الهيدر لجعل اسم الموقع في اليمين */
 .site-header {
     width: 100%;
-    padding: 25px 4% 10px 4%; /* مسافة من الأعلى واليمين */
+    padding: 30px 5% 10px 5%; 
     display: flex;
-    justify-content: flex-start; /* توجيه النص لليمين تماماً */
+    justify-content: flex-start; 
 }
 
 /* خط اسم الموقع الكبير والمميز */
 .site-title {
-    font-size: 2.8rem; /* خط كبير جداً وواضح */
+    font-size: 3rem; /* خط كبير جداً وواضح */
     color: #28a745; /* لون أخضر عشبي رياضي */
-    font-weight: 900;
+    font-weight: 900; 
 }
 
 /* تنسيق الحاوية لتوسيط الزر في نصف الشاشة بالظبط */
@@ -39,26 +40,34 @@ body {
     padding: 20px;
 }
 
-/* تنسيق الزر على شكل مستطيل منسق في المنتصف */
+/* تنسيق الزر المستطيل بالخط الضخم جداً والتأثير التفاعلي */
 .btn-watch-rectangle {
     display: block;
     width: 100%;
-    max-width: 450px; /* تحديد عرض المستطيل ليظهر متناسقاً */
+    max-width: 500px; /* زيادة عرض المستطيل ليتحمل الخط الضخم */
     background-color: #ff003c; /* لون أحمر ناري قوي */
     color: #ffffff;
     text-decoration: none;
     text-align: center;
-    padding: 22px 0; /* مسافة داخلية ليعطي شكل مستطيل عريض */
-    font-size: 1.6rem;
-    font-weight: bold;
-    border-radius: 6px; /* انحناء بسيط جداً للأطراف ليحافظ على شكل المستطيل الحاد */
-    box-shadow: 0 5px 20px rgba(255, 0, 60, 0.4);
-    transition: all 0.3s ease;
+    padding: 28px 0; /* زيادة السماحة الرأسية للمستطيل */
+    font-size: 2.2rem; /* خط ضخم جداً وواضح تماماً */
+    font-weight: 900; /* أقصى درجات عرض الحروف السميكة */
+    border-radius: 8px; 
+    box-shadow: 0 6px 20px rgba(255, 0, 60, 0.4);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة سلسة ومرنة */
+    cursor: pointer;
+    user-select: none;
 }
 
-/* تأثير خفيف عند تمرير الماوس */
+/* التأثير المطور عند تحريك الماوس أو الوقوف فوق الزر */
 .btn-watch-rectangle:hover {
-    transform: scale(1.03);
-    background-color: #cc0030;
-    box-shadow: 0 8px 25px rgba(255, 0, 60, 0.6);
+    background-color: #ff1a4e;
+    box-shadow: 0 8px 30px rgba(255, 0, 60, 0.6);
+}
+
+/* 🌟 التأثير السحري: عند الضغط الفعلي (Click) يبرز الزر ويكبر ويتوهج */
+.btn-watch-rectangle:active {
+    transform: scale(1.12); /* يبرز ويكبر للأمام بنسبة ملحوظة */
+    background-color: #ff3362; /* يفتح لونه قليلاً ليعطي إضاءة */
+    box-shadow: 0 0 40px rgba(255, 0, 60, 0.9); /* توهج ضوئي خارق وخلفي */
 }
